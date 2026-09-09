@@ -56,7 +56,7 @@
     "ws": "8.21.3"
   },
   "devDependencies": {
-    "@types/node": "^22.20.0",
+    "@types/node": "^26.4.1",
     "@types/office-js": "^1.0.606",
     "eslint": "^10.9.1",
     "office-addin-debugging": "^6.1.2",
