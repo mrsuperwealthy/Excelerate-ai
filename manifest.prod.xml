@@ -6,22 +6,22 @@
   xmlns:ov="http://schemas.microsoft.com/office/taskpaneappversionoverrides"
   xsi:type="TaskPaneApp">
 
-  <Id>a1b2c3d4-e5f6-7890-abcd-ef1234567890</Id>
+  <Id>706bacf4-5186-4bc9-9147-731c874683e1</Id>
   <Version>1.0.0.0</Version>
-  <ProviderName>Pi for Excel</ProviderName>
+  <ProviderName>Satwik</ProviderName>
   <DefaultLocale>en-US</DefaultLocale>
-  <DisplayName DefaultValue="Pi for Excel" />
+  <DisplayName DefaultValue="Excelerate AI" />
   <Description DefaultValue="Open-source, multi-model AI sidebar add-in for Excel. Powered by Pi." />
-  <IconUrl DefaultValue="https://pi-for-excel.vercel.app/assets/icon-32.png" />
-  <HighResolutionIconUrl DefaultValue="https://pi-for-excel.vercel.app/assets/icon-80.png" />
-  <SupportUrl DefaultValue="https://github.com/tmustier/pi-for-excel" />
+  <IconUrl DefaultValue="https://excel.stwk.site/assets/icon-32.png" />
+  <HighResolutionIconUrl DefaultValue="https://excel.stwk.site/assets/icon-80.png" />
+  <SupportUrl DefaultValue="https://excel.stwk.site/#install" />
 
   <Hosts>
     <Host Name="Workbook" />
   </Hosts>
 
   <DefaultSettings>
-    <SourceLocation DefaultValue="https://pi-for-excel.vercel.app/src/taskpane.html" />
+    <SourceLocation DefaultValue="https://excel.stwk.site/src/taskpane.html" />
   </DefaultSettings>
 
   <Permissions>ReadWriteDocument</Permissions>
@@ -64,19 +64,19 @@
 
     <Resources>
       <bt:Images>
-        <bt:Image id="Icon16" DefaultValue="https://pi-for-excel.vercel.app/assets/icon-16.png" />
-        <bt:Image id="Icon32" DefaultValue="https://pi-for-excel.vercel.app/assets/icon-32.png" />
-        <bt:Image id="Icon80" DefaultValue="https://pi-for-excel.vercel.app/assets/icon-80.png" />
+        <bt:Image id="Icon16" DefaultValue="https://excel.stwk.site/assets/icon-16.png" />
+        <bt:Image id="Icon32" DefaultValue="https://excel.stwk.site/assets/icon-32.png" />
+        <bt:Image id="Icon80" DefaultValue="https://excel.stwk.site/assets/icon-80.png" />
       </bt:Images>
       <bt:Urls>
-        <bt:Url id="TaskpaneUrl" DefaultValue="https://pi-for-excel.vercel.app/src/taskpane.html" />
+        <bt:Url id="TaskpaneUrl" DefaultValue="https://excel.stwk.site/src/taskpane.html" />
       </bt:Urls>
       <bt:ShortStrings>
-        <bt:String id="GroupLabel" DefaultValue="Pi" />
-        <bt:String id="ButtonLabel" DefaultValue="Open Pi" />
+        <bt:String id="GroupLabel" DefaultValue="Excelerate AI" />
+        <bt:String id="ButtonLabel" DefaultValue="Excelerate AI" />
       </bt:ShortStrings>
       <bt:LongStrings>
-        <bt:String id="ButtonDesc" DefaultValue="Open the Pi AI assistant sidebar" />
+        <bt:String id="ButtonDesc" DefaultValue="Open the Excelerate AI assistant sidebar" />
       </bt:LongStrings>
     </Resources>
   </VersionOverrides>

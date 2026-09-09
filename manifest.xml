@@ -6,15 +6,15 @@
   xmlns:ov="http://schemas.microsoft.com/office/taskpaneappversionoverrides"
   xsi:type="TaskPaneApp">
 
-  <Id>a1b2c3d4-e5f6-7890-abcd-ef1234567890</Id>
+  <Id>706bacf4-5186-4bc9-9147-731c874683e1</Id>
   <Version>1.0.0.0</Version>
-  <ProviderName>Pi for Excel</ProviderName>
+  <ProviderName>Satwik</ProviderName>
   <DefaultLocale>en-US</DefaultLocale>
-  <DisplayName DefaultValue="Pi for Excel" />
+  <DisplayName DefaultValue="Excelerate AI" />
   <Description DefaultValue="Open-source, multi-model AI sidebar add-in for Excel. Powered by Pi." />
   <IconUrl DefaultValue="https://localhost:3141/assets/icon-32.png" />
   <HighResolutionIconUrl DefaultValue="https://localhost:3141/assets/icon-80.png" />
-  <SupportUrl DefaultValue="https://github.com/tmustier/pi-for-excel/issues/new/choose" />
+  <SupportUrl DefaultValue="https://excel.stwk.site/#install" />
 
   <Hosts>
     <Host Name="Workbook" />
@@ -72,11 +72,11 @@
         <bt:Url id="TaskpaneUrl" DefaultValue="https://localhost:3141/src/taskpane.html" />
       </bt:Urls>
       <bt:ShortStrings>
-        <bt:String id="GroupLabel" DefaultValue="Pi" />
-        <bt:String id="ButtonLabel" DefaultValue="Open Pi" />
+        <bt:String id="GroupLabel" DefaultValue="Excelerate AI" />
+        <bt:String id="ButtonLabel" DefaultValue="Excelerate AI" />
       </bt:ShortStrings>
       <bt:LongStrings>
-        <bt:String id="ButtonDesc" DefaultValue="Open the Pi AI assistant sidebar" />
+        <bt:String id="ButtonDesc" DefaultValue="Open the Excelerate AI assistant sidebar" />
       </bt:LongStrings>
     </Resources>
   </VersionOverrides>

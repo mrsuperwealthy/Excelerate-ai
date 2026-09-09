@@ -1,7 +1,7 @@
 {
-  "name": "pi-for-excel",
+  "name": "excelerate-ai",
   "version": "0.10.0-pre",
-  "description": "Open-source, multi-model AI sidebar add-in for Excel. Powered by Pi.",
+  "description": "Excelerate AI by Satwik \u2014 an open-source AI assistant inside Excel, powered by pi.",
   "type": "module",
   "scripts": {
     "dev": "vite --port 3141",
@@ -46,8 +46,8 @@
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.120.0",
-    "@earendil-works/pi-agent-core": "0.83.0",
-    "@earendil-works/pi-ai": "0.83.0",
+    "@earendil-works/pi-agent-core": "0.85.1",
+    "@earendil-works/pi-ai": "0.85.1",
     "@sinclair/typebox": "^0.34.52",
     "highlight.js": "^11.12.0",
     "lit": "^3.3.3",
@@ -70,7 +70,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/tmustier/pi-for-excel.git"
+    "url": "https://github.com/mrsuperwealthy/Excelerate-ai.git"
   },
   "engines": {
     "node": "^22.19.0 || >=24"
@@ -89,5 +89,7 @@
     "@xmldom/xmldom": "0.8.13",
     "protobufjs": "7.6.5",
     "follow-redirects": "1.16.0"
-  }
+  },
+  "author": "Satwik",
+  "homepage": "https://excel.stwk.site"
 }

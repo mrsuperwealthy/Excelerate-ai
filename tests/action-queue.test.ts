@@ -204,7 +204,7 @@ void test("queued prompt survives compact replaceMessages and runs after compact
       assert.equal(busyIndicators[0]?.label, "Compacting context…");
       assert.equal(
         busyIndicators[0]?.hint,
-        "Send messages and Pi will see them after compaction",
+        "Send messages and Excelerate AI will see them after compaction",
       );
       assert.equal(busyIndicators[busyIndicators.length - 1]?.label, null);
 

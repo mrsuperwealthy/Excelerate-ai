@@ -1,0 +1,5 @@
+/proxy /proxy.sh 200
+/oauth/callback /oauth-callback.html 200
+/auth/callback /oauth-callback.html 200
+/oauth2callback /oauth-callback.html 200
+/oauth-callback /oauth-callback.html 200

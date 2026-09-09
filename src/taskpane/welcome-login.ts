@@ -90,7 +90,12 @@ export async function showWelcomeLogin(providerKeys: ProviderKeysStore): Promise
     const subtitleId = `${WELCOME_LOGIN_OVERLAY_ID}-subtitle`;
 
     const logo = createElement("div", "pi-welcome-logo");
-    logo.textContent = "π";
+    const brandImage = document.createElement("img");
+    brandImage.src = "/assets/excelerate-logo.svg";
+    brandImage.alt = "Excelerate AI";
+    brandImage.width = 48;
+    brandImage.height = 48;
+    logo.append(brandImage);
 
     const title = createElement("h2", "pi-welcome-title");
     title.id = titleId;

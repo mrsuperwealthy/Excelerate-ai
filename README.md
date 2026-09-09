@@ -1,3 +1,30 @@
+# Excelerate AI
+
+By **Satwik**. [Website](https://excel.stwk.site) · [Source](https://github.com/mrsuperwealthy/Excelerate-ai)
+
+A branded fork of [Pi for Excel](https://github.com/tmustier/pi-for-excel). The upstream Excel tools and agent functionality are preserved. Original copyright and MIT license are retained.
+
+## Latest changes
+
+- pi-ai and pi-agent-core upgraded to 0.85.1.
+- Direct OpenRouter gateway transport, including API-base normalization.
+- Excelerate AI branding across the website and add-in.
+- Existing workbook tools preserved.
+- 58 model, 111 security, and 747 context tests passed; live Excel response remains unverified.
+
+## OpenRouter setup
+
+In Settings → Custom gateway, use `https://openrouter.ai/api/v1`, your OpenRouter key, and a supported model ID. For `nex-agi/nex-n2.5-mini:free`, set context to `262144`. This connection does not need the local proxy.
+
+## Cloudflare deployment
+
+```sh
+npm ci
+ADDIN_BASE_URL=https://excel.stwk.site npm run manifest:prod
+npm run build
+npx wrangler deploy
+```
+
 # Pi for Excel
 
 English | [简体中文](./README.zh-CN.md)

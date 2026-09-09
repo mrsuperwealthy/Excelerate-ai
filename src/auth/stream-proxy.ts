@@ -21,7 +21,7 @@ import type {
 import { isDebugEnabled } from "../debug/debug.js";
 import { selectToolBundle, type ToolBundleId } from "../context/tool-disclosure.js";
 import { modelRecencyScore } from "../models/model-ordering.js";
-import { OPENAI_GATEWAY_PROVIDER_PREFIX } from "./custom-gateways.js";
+import { OPENAI_GATEWAY_PROVIDER_PREFIX, isDirectOpenRouterGateway } from "./custom-gateways.js";
 import {
   createPrefixFingerprint,
   type PrefixChangeReason,
@@ -583,12 +583,14 @@ export function createOfficeStreamFn(
     );
     const effectiveOptions = withPayloadHook(options, callRecord.call, callRecord.captureSnapshot);
 
-    const proxyUrl = await getProxyUrl();
+    // OpenRouter supports browser CORS; bypass an unavailable local proxy.
+    const directOpenRouter = isDirectOpenRouterGateway(normalizedModel.baseUrl);
+    const proxyUrl = directOpenRouter ? undefined : await getProxyUrl();
     const needsCodexBridge = requiresCodexWebSocketBridge(normalizedModel);
     if (!proxyUrl) {
       if (needsCodexBridge) {
         throw new Error(
-          "GPT-5.6 Luna currently requires the latest Pi for Excel proxy for ChatGPT WebSocket transport. " +
+          "GPT-5.6 Luna currently requires the latest Excelerate AI proxy for ChatGPT WebSocket transport. " +
           "Enable Proxy in Settings and run: npx -y pi-for-excel-proxy@latest",
         );
       }
@@ -606,7 +608,7 @@ export function createOfficeStreamFn(
       const bridgeSupported = await proxySupportsCodexWebSocketBridge(validated);
       if (!bridgeSupported) {
         throw new Error(
-          "GPT-5.6 Luna requires a newer Pi for Excel proxy with ChatGPT WebSocket support. " +
+          "GPT-5.6 Luna requires a newer Excelerate AI proxy with ChatGPT WebSocket support. " +
           "Restart with: npx -y pi-for-excel-proxy@latest (central deployments: ask your administrator to upgrade the proxy).",
         );
       }

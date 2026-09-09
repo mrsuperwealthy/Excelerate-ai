@@ -78,6 +78,10 @@ export function normalizeGatewayEndpointUrl(endpointUrl: string): string {
   }
 
   parsed.hash = "";
+  // The OpenAI SDK appends /chat/completions to this base URL.
+  if (parsed.origin === "https://openrouter.ai" && parsed.pathname === "/api/v1/chat/completions") {
+    parsed.pathname = "/api/v1";
+  }
   const normalized = parsed.toString();
   return normalized.endsWith("/") ? normalized.slice(0, -1) : normalized;
 }
@@ -426,4 +430,9 @@ export function collectCustomProviderRuntimeInfo(
     apiKeys,
     defaultModel,
   };
+}
+
+/** OpenRouter supports direct browser requests without the local helper. */
+export function isDirectOpenRouterGateway(baseUrl: string | undefined): boolean {
+  return baseUrl === "https://openrouter.ai/api/v1" || baseUrl === "https://openrouter.ai/api/v1/";
 }

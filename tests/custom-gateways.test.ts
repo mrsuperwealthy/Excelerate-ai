@@ -5,6 +5,8 @@ import type { CustomProvider } from "../src/storage/local/custom-providers-store
 
 import {
   DEFAULT_OPENAI_GATEWAY_CONTEXT_WINDOW,
+  isDirectOpenRouterGateway,
+  normalizeGatewayEndpointUrl,
   collectCustomProviderRuntimeInfo,
   deleteOpenAiGatewayConfig,
   listOpenAiGatewayConfigs,
@@ -234,4 +236,14 @@ void test("collectCustomProviderRuntimeInfo includes custom provider names and a
   assert.equal(runtimeInfo.apiKeys.get(gateway.providerName), "runtime-key");
   assert.equal(runtimeInfo.apiKeys.get("Local Ollama"), undefined);
   assert.equal(runtimeInfo.defaultModel?.id, "runtime-model");
+});
+
+void test("OpenRouter uses browser transport only for the exact trusted API base", () => {
+  assert.equal(isDirectOpenRouterGateway("https://openrouter.ai/api/v1"), true);
+  assert.equal(isDirectOpenRouterGateway("https://openrouter.ai/api/v1/"), true);
+  assert.equal(isDirectOpenRouterGateway("https://openrouter.ai.evil.test/api/v1"), false);
+  assert.equal(isDirectOpenRouterGateway("https://gateway.example.com/v1"), false);
+  assert.equal(isDirectOpenRouterGateway(undefined), false);
+  assert.equal(normalizeGatewayEndpointUrl("https://openrouter.ai/api/v1/chat/completions"), "https://openrouter.ai/api/v1");
+  assert.equal(normalizeGatewayEndpointUrl("https://gateway.example.com/v1/chat/completions"), "https://gateway.example.com/v1/chat/completions");
 });

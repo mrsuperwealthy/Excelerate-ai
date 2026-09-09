@@ -36,3 +36,10 @@ manifest.dev.xml
 
 # Session exports
 pi-session-*
+
+# Local Cloudflare state and secrets
+.wrangler/
+.env
+.env.*
+!.env.example
+.dev.vars

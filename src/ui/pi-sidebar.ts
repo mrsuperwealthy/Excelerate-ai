@@ -1210,7 +1210,7 @@ export class PiSidebar extends LitElement {
     return html`
       <div class="pi-empty">
         <div class="pi-empty__content">
-          <div class="pi-empty__logo">π</div>
+          <div class="pi-empty__logo"><img src="/assets/excelerate-logo.svg" width="24" height="24" alt="Excelerate AI"></div>
           <p class="pi-empty__tagline">
             ${t("sidebar.empty.tagline")}
           </p>

@@ -1,0 +1,15 @@
+{
+  "name": "excelerate-ai",
+  "compatibility_date": "2026-09-09",
+  "account_id": "e1072a321b91cf2d39587f2a8b2582b7",
+  "assets": {
+    "directory": "./dist",
+    "not_found_handling": "none"
+  },
+  "routes": [
+    {
+      "pattern": "excel.stwk.site",
+      "custom_domain": true
+    }
+  ]
+}
