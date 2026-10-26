@@ -46,7 +46,7 @@
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.120.0",
-    "@earendil-works/pi-agent-core": "0.85.1",
+    "@earendil-works/pi-agent-core": "1.4.0",
     "@earendil-works/pi-ai": "0.85.1",
     "@sinclair/typebox": "^0.34.52",
     "highlight.js": "^11.12.0",
